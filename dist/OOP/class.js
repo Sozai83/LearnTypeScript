@@ -18,6 +18,8 @@ shiori.greeting();
 shiori.incrementAge();
 //Hello. My name is Shiori. I am 33 years old.
 shiori.greeting();
+//This will error as age field is priavate
+//errors - console.log(shiori.age);
 const anotherShiori = {
     anotherGreeting: shiori.greeting
 };
