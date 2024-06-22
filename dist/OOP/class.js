@@ -34,6 +34,7 @@ const anotherShiori = {
 // anotherShiori2.greeting();
 //Readonly
 class Person2 {
+    //protected - age can be used in the child class
     constructor(name, age) {
         this.name = name;
         this.age = age;

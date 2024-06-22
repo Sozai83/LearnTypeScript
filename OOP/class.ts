@@ -49,7 +49,8 @@ const anotherShiori = {
 
 //Readonly
 class Person2 {
-    constructor(readonly name: string, private age: number) { }
+    //protected - age can be used in the child class
+    constructor(readonly name: string, protected age: number) { }
 
     greeting(this: Person2) {
         console.log(`Hello. My name is ${this.name}. I am ${this.age} years old.`);
