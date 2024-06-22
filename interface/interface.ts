@@ -30,3 +30,30 @@ const human2: Human2 = {
         console.log(message);
     }
 }
+
+interface DeveloperInterface {
+    position: string;
+}
+
+class Developer implements Human2, DeveloperInterface {
+    constructor(
+        public name: string,
+        public age: number,
+        public experience: number,
+        public position: string
+    ) { }
+    greeting(message: string) { console.log(message); }
+}
+
+const user = new Developer("Shiori", 33, 3, "Junior software enginner");
+user.greeting('Hello');
+
+const tempUser = {
+    name: "Karl",
+    age: 32,
+    experience: 2,
+    greeting(message: string) {
+        console.log(message);
+    }
+}
+const user2: Human = tempUser;
