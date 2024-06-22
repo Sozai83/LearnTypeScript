@@ -11,6 +11,14 @@ function echo(message: string, name: string): string | null {
     return message;
 }
 
+
+//noImplicitReturns
+function echo2(message: string) {
+    if (message) {
+        return message;
+    }
+}
+
 let implicitAny;
 //implicityAny : any
 implicitAny = "string";
