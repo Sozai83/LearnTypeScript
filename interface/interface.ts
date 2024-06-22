@@ -1,6 +1,6 @@
 type Human = {
     name: string;
-    age: number;
+    readonly age: number;
 } | string;
 
 
@@ -9,12 +9,15 @@ const human: Human = {
     age: 33,
 }
 
+// Errors - human.age = 22;
+
 let developer: Human;
 
 //interface is only for object. Type arias can be used for any types.
+// readonly will not work with the Developer class where it's "implemented". It will refer to the setting within the class instead.
 interface Human2 {
     name: string;
-    age: number;
+    readonly age: number;
     //add method
     //greeting: (msg: string) => void;
     greeting(msg: string): void;
@@ -56,4 +59,6 @@ const tempUser = {
         console.log(message);
     }
 }
-const user2: Human = tempUser;
+const user2: Human2 = tempUser;
+
+// Errors - user2.age = 22;

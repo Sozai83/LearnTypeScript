@@ -3,6 +3,7 @@ const human = {
     name: "Shiori",
     age: 33,
 };
+// Errors - human.age = 22;
 let developer;
 const human2 = {
     name: "Shiori",
@@ -31,3 +32,4 @@ const tempUser = {
     }
 };
 const user2 = tempUser;
+// Errors - user2.age = 22;
