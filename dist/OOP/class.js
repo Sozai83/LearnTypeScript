@@ -32,3 +32,17 @@ const anotherShiori = {
 // }
 // //Hello. My name is Shiori
 // anotherShiori2.greeting();
+class Person2 {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+        this.name = name;
+        this.age = age;
+    }
+    greeting() {
+        console.log(`Hello. My name is ${this.name}. I am ${this.age} years old.`);
+    }
+}
+const karl = new Person2("Karl", 32);
+//Hello. My name is Karl. I am 32 years old.
+karl.greeting();
