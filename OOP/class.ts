@@ -1,19 +1,21 @@
 class Person {
     //property
     name: string;
+    age: number;
 
-    constructor(initName: string) {
+    constructor(initName: string, initAge: number) {
         this.name = initName;
+        this.age = initAge;
     }
 
     //method
-    greeting(this: { name: string }) {
-        console.log(`Hello. My name is ${this.name}`);
+    greeting(this: Person) {
+        console.log(`Hello. My name is ${this.name}. I am ${this.age} years old.`);
     }
 
 }
 
-const shiori = new Person("Shiori");
+const shiori = new Person("Shiori", 32);
 shiori.greeting();
 console.log('Shiori');
 
@@ -26,8 +28,9 @@ const anotherShiori = {
 
 const anotherShiori2 = {
     name: 'Shiori',
-    anotherGreeting: shiori.greeting
+    age: 36,
+    greeting: shiori.greeting
 }
 
 //Hello. My name is Shiori
-anotherShiori2.anotherGreeting();
+anotherShiori2.greeting();
