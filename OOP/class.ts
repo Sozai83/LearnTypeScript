@@ -73,7 +73,7 @@ console.log(karl.name);
 
 //teacher is also person
 class Teacher extends Person2 {
-    get subject() {
+    get subject(): string {
         if (!this._subject) {
             // errors if subject value is none
             throw new Error('There is no subject.');
