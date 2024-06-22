@@ -66,14 +66,30 @@ const karl = new Person2("Karl", 32);
 
 //Hello. My name is Karl. I am 32 years old.
 karl.greeting();
-
+//Karl
 console.log(karl.name);
 //errors as it's read only
 //karl.name = "Shiori";
 
 //teacher is also person
 class Teacher extends Person2 {
-    constructor(name: string, age: number, public subject: string) {
+    get subject() {
+        if (!this._subject) {
+            // errors if subject value is none
+            throw new Error('There is no subject.');
+        }
+        return this._subject;
+    }
+
+    set subject(value) {
+        if (!value) {
+            // errors if subject value is none
+            throw new Error('There is no value.');
+        }
+        this._subject = value;
+    }
+
+    constructor(name: string, age: number, private _subject: string) {
         super(name, age);
     }
 
@@ -86,4 +102,8 @@ const teacher = new Teacher("Ichi", 28, "Math");
 //Hello. My name is Ichi. I am 28 years old.
 teacher.greeting();
 //Math
+console.log(teacher.subject);
+
+teacher.subject = "Music";
+//Music
 console.log(teacher.subject);
