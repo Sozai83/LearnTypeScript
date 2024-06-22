@@ -7,12 +7,27 @@ class Person {
     }
 
     //method
-    greeting() {
+    greeting(this: { name: string }) {
         console.log(`Hello. My name is ${this.name}`);
     }
 
 }
 
-const Shiori = new Person("Shiori");
-Shiori.greeting();
+const shiori = new Person("Shiori");
+shiori.greeting();
 console.log('Shiori');
+
+const anotherShiori = {
+    anotherGreeting: shiori.greeting
+}
+
+//Hello. My name is undefined
+//return an error - anotherShiori.anotherGreeting();
+
+const anotherShiori2 = {
+    name: 'Shiori',
+    anotherGreeting: shiori.greeting
+}
+
+//Hello. My name is Shiori
+anotherShiori2.anotherGreeting();
