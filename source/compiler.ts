@@ -6,6 +6,10 @@ function hi(message: string) {
     console.log(message);
 }
 
+function echo(message: string): string | null {
+    return message;
+}
+
 let implicitAny;
 //implicityAny : any
 implicitAny = "string";
@@ -16,3 +20,17 @@ let nullableMessage: string | null = null;
 let undefinedMessage: string | undefined = undefined;
 let onlyNull: null | undefined = undefined
 let onlyUndefined: undefined | null = null;
+
+// call binds a parameter for "this"
+echo.call(null, "hi");
+
+//noUnusedLocals
+
+function unusedLocals(message: string) {
+    //'oi' is declared but its value is never read.
+    const oi = "Oi";
+    return message;
+}
+
+//no error
+let globalHello = "hello";
