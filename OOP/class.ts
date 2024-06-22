@@ -8,6 +8,10 @@ class Person {
         this.age = initAge;
     }
 
+    incrementAge() {
+        this.age++;
+    }
+
     //method
     greeting(this: Person) {
         console.log(`Hello. My name is ${this.name}. I am ${this.age} years old.`);
@@ -16,8 +20,12 @@ class Person {
 }
 
 const shiori = new Person("Shiori", 32);
+//Hello. My name is Shiori. I am 32 years old
 shiori.greeting();
-console.log('Shiori');
+
+shiori.incrementAge();
+//Hello. My name is Shiori. I am 33 years old.
+shiori.greeting();
 
 const anotherShiori = {
     anotherGreeting: shiori.greeting
@@ -26,11 +34,11 @@ const anotherShiori = {
 //Hello. My name is undefined
 //return an error - anotherShiori.anotherGreeting();
 
-const anotherShiori2 = {
-    name: 'Shiori',
-    age: 36,
-    greeting: shiori.greeting
-}
+// const anotherShiori2 = {
+//     name: 'Shiori',
+//     age: 36,
+//     greeting: shiori.greeting
+// }
 
-//Hello. My name is Shiori
-anotherShiori2.greeting();
+// //Hello. My name is Shiori
+// anotherShiori2.greeting();
