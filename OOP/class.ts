@@ -49,7 +49,7 @@ const anotherShiori = {
 
 //Readonly
 class Person2 {
-    constructor(public readonly name: string, private age: number) { }
+    constructor(readonly name: string, private age: number) { }
 
     greeting(this: Person2) {
         console.log(`Hello. My name is ${this.name}. I am ${this.age} years old.`);
@@ -69,3 +69,20 @@ karl.greeting();
 console.log(karl.name);
 //errors as it's read only
 //karl.name = "Shiori";
+
+//teacher is also person
+class Teacher extends Person2 {
+    constructor(name: string, age: number, public subject: string) {
+        super(name, age);
+    }
+
+    greeting(this: Teacher) {
+        console.log(`Hello. My name is ${this.name}. I am ${this.age} years old. I teach ${this.subject}`);
+    }
+}
+
+const teacher = new Teacher("Ichi", 28, "Math");
+//Hello. My name is Ichi. I am 28 years old.
+teacher.greeting();
+//Math
+console.log(teacher.subject);

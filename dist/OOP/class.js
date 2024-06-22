@@ -52,3 +52,18 @@ karl.greeting();
 console.log(karl.name);
 //errors as it's read only
 //karl.name = "Shiori";
+//teacher is also person
+class Teacher extends Person2 {
+    constructor(name, age, subject) {
+        super(name, age);
+        this.subject = subject;
+    }
+    greeting() {
+        console.log(`Hello. My name is ${this.name}. I am ${this.age} years old. I teach ${this.subject}`);
+    }
+}
+const teacher = new Teacher("Ichi", 28, "Math");
+//Hello. My name is Ichi. I am 28 years old.
+teacher.greeting();
+//Math
+console.log(teacher.subject);
