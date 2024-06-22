@@ -38,7 +38,18 @@ interface DeveloperInterface {
     position: string;
 }
 
-class Developer implements Human2, DeveloperInterface {
+//interface can extend another interface or type
+interface DeveloperInterface2 extends Human2 {
+    //errors name: number;
+    name: any;
+    experience: number;
+}
+
+type DeveloperType = {
+    name: number // this will not error but it becomes "never" type
+} & Human2
+
+class Developer implements DeveloperInterface2, DeveloperInterface {
     constructor(
         public name: string,
         public age: number,
