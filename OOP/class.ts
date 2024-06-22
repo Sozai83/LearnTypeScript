@@ -1,7 +1,7 @@
 class Person {
     //property
     name: string;
-    age: number;
+    private age: number;
 
     constructor(initName: string, initAge: number) {
         this.name = initName;
