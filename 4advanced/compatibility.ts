@@ -72,3 +72,8 @@ target6 = source6;
 
 //https://www.typescriptlang.org/docs/handbook/type-compatibility.html#private-and-protected-members-in-classes
 //https://github.com/microsoft/TypeScript/blob/c57fea2a0d736b5051ec72bdeb70ace6ac02ca2e/doc/spec-ARCHIVED.md
+
+//4.19.2 + operator
+let plusAny: any = 'hello';
+let plusNumber: number = 1;
+let plus = plusAny + plusNumber;
