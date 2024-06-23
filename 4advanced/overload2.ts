@@ -27,7 +27,7 @@ const lowerHello: tempFunc = toLowerCase;
 const lowerNumber = toLowerCase(2);
 
 
-//
+//Function Type Union
 interface FuncA {
     (a: number, b: string): number;
     (a: string, b: number): number;
@@ -48,6 +48,7 @@ let intersectionFunc: FuncA & FuncB;
 intersectionFunc = function (a: number | string, b?: string | number) { return 0 };
 
 
+//Function Type Intersection
 interface FuncC {
     (a: number): number;
 }
@@ -58,7 +59,9 @@ interface FuncD {
 
 
 /*
-
+(a: number): number;
+OR
+(a: string): string;
  */
 
 let unionFunc: FuncC | FuncD;
