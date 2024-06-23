@@ -26,7 +26,14 @@ function advancedFn4(...args: [number, string, boolean?, ...number[]]) {
 
 }
 
+advancedFn4(1, 'hello', true);
 advancedFn4(3, 'hi', true, 4, 5);
 //Argument of type '4' is not assignable to parameter of type 'boolean | undefined'.
 //errors advancedFn4(3, 'hi', 4, 5);
 
+//Label
+function advancedFn5(...args: [age: number, name: string, hasPets?: boolean, ...scores: number[]]) {
+
+}
+
+advancedFn5(3, 'hi', true, 4, 5);
