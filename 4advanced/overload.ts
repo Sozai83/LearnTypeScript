@@ -1,4 +1,5 @@
-//Function Overload
+//Function Overload - You can only use as follows.
+// You cannot use it with allow function etc
 
 //type of
 function toUppperCase2(x: string): string;
@@ -16,3 +17,5 @@ function toUppperCase2(x: string | number) {
 const upperHello = toUppperCase2('Hello');
 //number 
 const upperNumber = toUppperCase2(2);
+
+
