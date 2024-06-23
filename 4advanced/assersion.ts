@@ -23,7 +23,7 @@ input4.innerText = "test";
 
 
 
-//Index signature
+//Index signature - Not to use if you can
 //Add element in the type later
 
 interface Designer {
