@@ -27,3 +27,11 @@ const userData = downloadedData.user ?? 'no-user';
 //Access interface
 type id = downloadedData["id"]
 type user = downloadedData["user"]
+//array with string
+type stringArray = string[];
+//string
+type Arrayvalue = string[number];
+//tupple [string, number, boolean]
+type TuppleType = [string, number, boolean];
+//string | number | boolean
+type TuppleValue = TuppleType[number];
