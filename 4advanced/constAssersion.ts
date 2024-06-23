@@ -26,3 +26,8 @@ const peter = {
     name: 'Peter',
     age: 38
 } as const;
+
+
+
+//Typeof
+
