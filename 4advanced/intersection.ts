@@ -27,3 +27,54 @@ type StringNumber = string | number;
 //number
 type Mix = Numberboolean & StringNumber;
 
+//type of
+function toUppperCase(x: string | number) {
+    if (typeof x === 'string') {
+        return x.toUpperCase();
+    }
+
+    return '';
+
+}
+
+
+type NomadWorker = Engineer | Blogger;
+
+//in
+function describeProfile(nomadWorker: NomadWorker) {
+    if ('role' in nomadWorker) {
+        console.log(nomadWorker.role);
+    }
+    if ('follower' in nomadWorker) {
+        console.log(nomadWorker.follower);
+    }
+}
+
+//instance of
+class Dog {
+    speak() {
+        console.log('bow-wow');
+    }
+}
+
+class Bird {
+    speak() {
+        console.log('tweet-tweet');
+    }
+
+    fly() {
+        console.log('flutter');
+    }
+}
+
+type Pet = Dog | Bird;
+
+function havePet(pet: Pet) {
+    pet.speak();
+    if (pet instanceof Bird) {
+        pet.fly();
+    }
+}
+
+//only hello will appear
+havePet({ speak() { console.log('hello') }, fly() { console.log('Cannot fly') } });
