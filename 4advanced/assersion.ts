@@ -20,3 +20,22 @@ input3.value = "no error";
 //HTML element
 const input4 = document.getElementById('input')!;
 input4.innerText = "test";
+
+
+
+//Index signature
+//Add element in the type later
+
+interface Designer {
+    name: string;
+    //errors - age: number (type needs to match the index signature)
+    [index: string]: string;
+}
+
+const designer: Designer = {
+    name: 'Quill',
+    //does not error
+    role: 'Web'
+}
+
+console.log(designer.role);
