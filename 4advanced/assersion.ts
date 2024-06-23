@@ -13,3 +13,10 @@ input2.value = "test";
 input3.value = "no error";
 
 (document.getElementById('input') as HTMLInputElement).value = 'initial input value'
+
+
+//Non null assersion operator (Adding ! at the end)
+
+//HTML element
+const input4 = document.getElementById('input')!;
+input4.innerText = "test";
