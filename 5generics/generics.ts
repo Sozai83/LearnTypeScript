@@ -42,3 +42,4 @@ function copy3<T extends { name: string }>(value: T): T {
 //errors - console.log(copy3('hello'));
 
 console.log(copy3({ name: 'Quill' }));
+console.log(copy3({ name: 'Quill', age: 3 }));
