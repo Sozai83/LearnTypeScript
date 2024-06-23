@@ -17,5 +17,3 @@ function toUppperCase2(x: string | number) {
 const upperHello = toUppperCase2('Hello');
 //number 
 const upperNumber = toUppperCase2(2);
-
-
