@@ -37,3 +37,10 @@ function advancedFn5(...args: [age: number, name: string, hasPets?: boolean, ...
 }
 
 advancedFn5(3, 'hi', true, 4, 5);
+
+//readonly
+function advancedFn6(...args: readonly [age: number, name: string, hasPets?: boolean, ...scores: number[]]) {
+    //errors - because it's read only - args.push('test')
+}
+
+advancedFn6(3, 'hi', true, 4, 5);
