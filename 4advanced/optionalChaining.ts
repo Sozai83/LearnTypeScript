@@ -1,3 +1,4 @@
+//works the same if it's type
 interface downloadedData {
     id: number;
     user?: {
@@ -22,3 +23,7 @@ const userData = downloadedData.user ?? 'no-user';
 
 //|| = undefined | null | 0 | ''
 //const userData = downloadedData.user || 'no-user';
+
+//Access interface
+type id = downloadedData["id"]
+type user = downloadedData["user"]
