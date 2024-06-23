@@ -30,4 +30,15 @@ console.log(copy2({ name: 'Quill' }));
 
 
 //extends
+/* (type parameter) T in copy3<T extends {
+    name: string;
+}>(value: T): T
+*/
+function copy3<T extends { name: string }>(value: T): T {
+    return value;
+}
 
+//Argument of type 'string' is not assignable to parameter of type '{ name: string; }'.
+//errors - console.log(copy3('hello'));
+
+console.log(copy3({ name: 'Quill' }));
