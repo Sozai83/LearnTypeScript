@@ -43,3 +43,30 @@ function havePet(pet) {
 }
 //only hello will appear
 havePet({ speak() { console.log('hello'); }, fly() { console.log('Cannot fly'); } });
+//tags - this can be done with interface too
+class Dog2 {
+    constructor() {
+        this.kind = 'dog';
+    }
+    speak() {
+        console.log('bow-wow');
+    }
+}
+class Bird2 {
+    constructor() {
+        this.kind = 'bird';
+    }
+    speak() {
+        console.log('tweet-tweet');
+    }
+    fly() {
+        console.log('flutter');
+    }
+}
+function havePet2(pet) {
+    pet.speak();
+    switch (pet.kind) {
+        case 'bird':
+            pet.fly();
+    }
+}
