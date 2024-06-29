@@ -17,3 +17,11 @@ const stringLightDatabase = new LightDatabase();
 stringLightDatabase.add('apple');
 console.log(stringLightDatabase.get('apple'));
 stringLightDatabase.remove('apple');
+const lightDatabase2 = {
+    id: 3,
+    data: [32, 33]
+};
+const lightDatabase3 = {
+    id: 3,
+    data: [32, 33]
+};

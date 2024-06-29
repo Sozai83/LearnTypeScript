@@ -57,3 +57,5 @@ interface ResponseData2<T extends string = any> {
 //let tmp3: ResponseData2<any>
 let tmp3: ResponseData2;
 
+
+

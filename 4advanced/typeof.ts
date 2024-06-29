@@ -10,4 +10,4 @@ type PeterType = typeof peter2;
 const peter2 = {
     name: 'Peter',
     age: 38
-} as const;
+} as const; 

@@ -22,4 +22,3 @@ const peter = {
     name: 'Peter',
     age: 38
 };
-//Typeof
