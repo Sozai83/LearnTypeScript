@@ -18,7 +18,8 @@ const decUser = new User();
 const decUser2 = new User();
 
 /**
- * Logging....
+ * 
+Logging....
 [class User]
 User was created!
 User was created!

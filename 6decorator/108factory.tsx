@@ -7,6 +7,23 @@ function Logging2(message: string) {
     }
 }
 
+
+function Component(template: string, selector: string) {
+    //You cannot use Function for constructor
+    //To be able to access the class, you need to set the object.
+    return function (constructor: { new(...args: any[]): { name: string } }) {
+        const mountedElement = document.querySelector(selector);
+        //set contructor
+        const instance = new constructor();
+        if (mountedElement) {
+            mountedElement.innerHTML = template;
+            mountedElement.querySelector('h1')!.textContent = instance.name;
+        }
+
+    }
+}
+
+@Component('<h1>{{name}{</h1>', '#app')
 //decoration
 @Logging2('Logging User')
 class User2 {

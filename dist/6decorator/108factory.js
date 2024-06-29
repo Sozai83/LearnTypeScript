@@ -12,7 +12,19 @@ function Logging2(message) {
         console.log(constructor);
     };
 }
-//decoration
+function Component(template, selector) {
+    //You cannot use Function for constructor
+    //To be able to 
+    return function (constructor) {
+        const mountedElement = document.querySelector(selector);
+        //set contructor
+        const instance = new constructor();
+        if (mountedElement) {
+            mountedElement.innerHTML = template;
+            mountedElement.querySelector('h1').textContent = instance.name;
+        }
+    };
+}
 let User2 = class User2 {
     constructor() {
         this.name = 'Quill';
@@ -20,14 +32,17 @@ let User2 = class User2 {
     }
 };
 User2 = __decorate([
-    Logging2('Loggin User')
+    Component('<h1>{{name}{</h1>', '#app')
+    //decoration
+    ,
+    Logging2('Logging User')
 ], User2);
 const decUser3 = new User2();
 const decUser4 = new User2();
 /**
  *
-Logging....
-[class User]
+Logging User
+[class User2]
 User was created!
 User was created!
  *
