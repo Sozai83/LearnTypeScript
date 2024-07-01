@@ -6,7 +6,6 @@ function Logging2(message: string) {
         console.log(constructor);
     }
 }
-// test
 
 function Component(template: string, selector: string) {
     //You cannot use Function for constructor
